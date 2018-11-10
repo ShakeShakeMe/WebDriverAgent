@@ -49,7 +49,7 @@ const CGFloat FBTapDuration = 0.01f;
 
 - (BOOL)fb_performTapAtPoint:(CGPoint)hitPoint error:(NSError *__autoreleasing*)error
 {
-  [self fb_waitUntilFrameIsStable];
+//  [self fb_waitUntilFrameIsStable];
   __block BOOL didSucceed;
   [FBRunLoopSpinner spinUntilCompletion:^(void(^completion)(void)){
     XCEventGeneratorHandler handlerBlock = ^(XCSynthesizedEventRecord *record, NSError *commandError) {

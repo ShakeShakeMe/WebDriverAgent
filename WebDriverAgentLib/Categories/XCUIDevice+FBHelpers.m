@@ -23,7 +23,7 @@
 #import "XCAXClient_iOS.h"
 #import "XCUIScreen.h"
 
-static const NSTimeInterval FBHomeButtonCoolOffTime = 1.;
+//static const NSTimeInterval FBHomeButtonCoolOffTime = 1.;
 
 @implementation XCUIDevice (FBHelpers)
 
@@ -35,10 +35,10 @@ static const NSTimeInterval FBHomeButtonCoolOffTime = 1.;
   // So if we don't wait here it will be interpreted as double home button gesture and go to application switcher instead.
   // On 9.3 pressButton:XCUIDeviceButtonHome can be slightly delayed.
   // Causing waitUntilApplicationBoardIsVisible not to work properly in some edge cases e.g. like starting session right after this call, while being on home screen
-  [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:FBHomeButtonCoolOffTime]];
-  if (![[FBSpringboardApplication fb_springboard] fb_waitUntilApplicationBoardIsVisible:error]) {
-    return NO;
-  }
+//  [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:FBHomeButtonCoolOffTime]];
+//  if (![[FBSpringboardApplication fb_springboard] fb_waitUntilApplicationBoardIsVisible:error]) {
+//    return NO;
+//  }
   return YES;
 }
 
@@ -72,7 +72,7 @@ static const NSTimeInterval FBHomeButtonCoolOffTime = 1.;
 
   // The resulting data is a JPEG image, so we need to convert it to PNG representation
   UIImage *image = [UIImage imageWithData:result];
-  return (NSData *)UIImagePNGRepresentation(image);
+  return (NSData *)UIImageJPEGRepresentation(image, 0.2);
 }
 
 - (BOOL)fb_fingerTouchShouldMatch:(BOOL)shouldMatch

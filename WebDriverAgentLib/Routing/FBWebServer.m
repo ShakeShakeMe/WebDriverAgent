@@ -23,6 +23,8 @@
 #import "FBLogger.h"
 
 #import "XCUIDevice+FBHelpers.h"
+#import "BBCustomSnapshotService.h"
+#import "CustomSnapshotService.h"
 
 static NSString *const FBServerURLBeginMarker = @"ServerURLHere->";
 static NSString *const FBServerURLEndMarker = @"<-ServerURLHere";
@@ -70,6 +72,9 @@ static NSString *const FBServerURLEndMarker = @"<-ServerURLHere";
   self.exceptionHandler = [FBExceptionHandler new];
   [self startHTTPServer];
 
+//  [[BBCustomSnapshotService sharedInstance] startServer];
+  [[CustomSnapshotService sharedInstance] startServer];
+  
   self.keepAlive = YES;
   NSRunLoop *runLoop = [NSRunLoop mainRunLoop];
   while (self.keepAlive &&

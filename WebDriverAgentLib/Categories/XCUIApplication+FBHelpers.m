@@ -54,15 +54,15 @@ const static NSTimeInterval FBMinimumAppSwitchWait = 3.0;
 + (NSDictionary *)dictionaryForElement:(XCElementSnapshot *)snapshot
 {
   NSMutableDictionary *info = [[NSMutableDictionary alloc] init];
-  info[@"type"] = [FBElementTypeTransformer shortStringWithElementType:snapshot.elementType];
-  info[@"rawIdentifier"] = FBValueOrNull([snapshot.identifier isEqual:@""] ? nil : snapshot.identifier);
+//  info[@"type"] = [FBElementTypeTransformer shortStringWithElementType:snapshot.elementType];
+//  info[@"rawIdentifier"] = FBValueOrNull([snapshot.identifier isEqual:@""] ? nil : snapshot.identifier);
   info[@"name"] = FBValueOrNull(snapshot.wdName);
-  info[@"value"] = FBValueOrNull(snapshot.wdValue);
-  info[@"label"] = FBValueOrNull(snapshot.wdLabel);
+//  info[@"value"] = FBValueOrNull(snapshot.wdValue);
+//  info[@"label"] = FBValueOrNull(snapshot.wdLabel);
   info[@"rect"] = [XCUIApplication formattedRectWithFrame:snapshot.wdFrame];
-  info[@"frame"] = NSStringFromCGRect(snapshot.wdFrame);
-  info[@"isEnabled"] = [@([snapshot isWDEnabled]) stringValue];
-  info[@"isVisible"] = [@([snapshot isWDVisible]) stringValue];
+//  info[@"frame"] = NSStringFromCGRect(snapshot.wdFrame);
+//  info[@"isEnabled"] = [@([snapshot isWDEnabled]) stringValue];
+//  info[@"isVisible"] = [@([snapshot isWDVisible]) stringValue];
 
   NSArray *childElements = snapshot.children;
   if ([childElements count]) {

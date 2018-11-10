@@ -48,7 +48,7 @@
 
 - (BOOL)fb_performFourceTouchAtPoint:(CGPoint)hitPoint pressure:(double)pressure duration:(double)duration error:(NSError *__autoreleasing*)error
 {
-  [self fb_waitUntilFrameIsStable];
+//  [self fb_waitUntilFrameIsStable];
   __block BOOL didSucceed;
   [FBRunLoopSpinner spinUntilCompletion:^(void(^completion)(void)){
     XCEventGeneratorHandler handlerBlock = ^(XCSynthesizedEventRecord *record, NSError *commandError) {
