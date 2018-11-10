@@ -12,18 +12,18 @@
 		62B79B402196B66600D94763 /* libturbojpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B79B3E2196B66500D94763 /* libturbojpeg.a */; };
 		62B79B412196B66600D94763 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B79B3F2196B66600D94763 /* libjpeg.a */; };
 		62B79B552196E47200D94763 /* CocoaAsyncSocket.framework in Copy frameworks */ = {isa = PBXBuildFile; fileRef = 62B79B542196E47200D94763 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		62B79B6B2196FCC600D94763 /* Frame.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 62B79B5F2196FCC500D94763 /* Frame.hpp */; };
-		62B79B6C2196FCC600D94763 /* FrameListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62B79B602196FCC500D94763 /* FrameListener.cpp */; };
-		62B79B6D2196FCC600D94763 /* JpegEncoder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 62B79B612196FCC500D94763 /* JpegEncoder.hpp */; };
-		62B79B702196FCC600D94763 /* SimpleServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62B79B642196FCC500D94763 /* SimpleServer.cpp */; };
-		62B79B712196FCC600D94763 /* SimpleServer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 62B79B652196FCC500D94763 /* SimpleServer.hpp */; };
-		62B79B722196FCC600D94763 /* StreamClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 62B79B662196FCC600D94763 /* StreamClient.h */; };
-		62B79B732196FCC600D94763 /* StreamClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 62B79B672196FCC600D94763 /* StreamClient.mm */; };
-		62B79B742196FCC600D94763 /* FrameListener.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 62B79B682196FCC600D94763 /* FrameListener.hpp */; };
-		62B79B762196FCC600D94763 /* JpegEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62B79B6A2196FCC600D94763 /* JpegEncoder.cpp */; };
 		62B79B782196FD1800D94763 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B79B772196FD1800D94763 /* CoreImage.framework */; };
-		62B79B7B2196FEFB00D94763 /* CustomSnapshotService.h in Headers */ = {isa = PBXBuildFile; fileRef = 62B79B792196FEFB00D94763 /* CustomSnapshotService.h */; };
-		62B79B7C2196FEFB00D94763 /* CustomSnapshotService.mm in Sources */ = {isa = PBXBuildFile; fileRef = 62B79B7A2196FEFB00D94763 /* CustomSnapshotService.mm */; };
+		62B79B892197353200D94763 /* FrameListener.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 62B79B7E2197353100D94763 /* FrameListener.hpp */; };
+		62B79B8A2197353200D94763 /* FrameListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62B79B7F2197353100D94763 /* FrameListener.cpp */; };
+		62B79B8B2197353200D94763 /* StreamClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 62B79B802197353100D94763 /* StreamClient.mm */; };
+		62B79B8C2197353200D94763 /* JpegEncoder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 62B79B812197353100D94763 /* JpegEncoder.hpp */; };
+		62B79B8D2197353200D94763 /* SimpleServer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 62B79B822197353100D94763 /* SimpleServer.hpp */; };
+		62B79B8E2197353200D94763 /* JpegEncoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62B79B832197353100D94763 /* JpegEncoder.cpp */; };
+		62B79B8F2197353200D94763 /* SimpleServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62B79B842197353100D94763 /* SimpleServer.cpp */; };
+		62B79B902197353200D94763 /* StreamClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 62B79B852197353100D94763 /* StreamClient.h */; };
+		62B79B912197353200D94763 /* CustomSnapshotService.mm in Sources */ = {isa = PBXBuildFile; fileRef = 62B79B862197353100D94763 /* CustomSnapshotService.mm */; };
+		62B79B922197353200D94763 /* CustomSnapshotService.h in Headers */ = {isa = PBXBuildFile; fileRef = 62B79B872197353100D94763 /* CustomSnapshotService.h */; };
+		62B79B932197353200D94763 /* Frame.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 62B79B882197353100D94763 /* Frame.hpp */; };
 		711084441DA3AA7500F913D6 /* FBXPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 711084421DA3AA7500F913D6 /* FBXPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		711084451DA3AA7500F913D6 /* FBXPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 711084431DA3AA7500F913D6 /* FBXPath.m */; };
 		712A0C851DA3E459007D02E5 /* FBXPathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 712A0C841DA3E459007D02E5 /* FBXPathTests.m */; };
@@ -362,18 +362,18 @@
 		62B79B3E2196B66500D94763 /* libturbojpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libturbojpeg.a; path = "WebDriverAgentLib/snapshot/jpeg-turbo/libturbojpeg.a"; sourceTree = "<group>"; };
 		62B79B3F2196B66600D94763 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = "WebDriverAgentLib/snapshot/jpeg-turbo/libjpeg.a"; sourceTree = "<group>"; };
 		62B79B542196E47200D94763 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
-		62B79B5F2196FCC500D94763 /* Frame.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Frame.hpp; path = WebDriverAgentLib/snapshot2/Frame.hpp; sourceTree = SOURCE_ROOT; };
-		62B79B602196FCC500D94763 /* FrameListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FrameListener.cpp; path = WebDriverAgentLib/snapshot2/FrameListener.cpp; sourceTree = SOURCE_ROOT; };
-		62B79B612196FCC500D94763 /* JpegEncoder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = JpegEncoder.hpp; path = WebDriverAgentLib/snapshot2/JpegEncoder.hpp; sourceTree = SOURCE_ROOT; };
-		62B79B642196FCC500D94763 /* SimpleServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SimpleServer.cpp; path = WebDriverAgentLib/snapshot2/SimpleServer.cpp; sourceTree = SOURCE_ROOT; };
-		62B79B652196FCC500D94763 /* SimpleServer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SimpleServer.hpp; path = WebDriverAgentLib/snapshot2/SimpleServer.hpp; sourceTree = SOURCE_ROOT; };
-		62B79B662196FCC600D94763 /* StreamClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StreamClient.h; path = WebDriverAgentLib/snapshot2/StreamClient.h; sourceTree = SOURCE_ROOT; };
-		62B79B672196FCC600D94763 /* StreamClient.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = StreamClient.mm; path = WebDriverAgentLib/snapshot2/StreamClient.mm; sourceTree = SOURCE_ROOT; };
-		62B79B682196FCC600D94763 /* FrameListener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FrameListener.hpp; path = WebDriverAgentLib/snapshot2/FrameListener.hpp; sourceTree = SOURCE_ROOT; };
-		62B79B6A2196FCC600D94763 /* JpegEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = JpegEncoder.cpp; path = WebDriverAgentLib/snapshot2/JpegEncoder.cpp; sourceTree = SOURCE_ROOT; };
 		62B79B772196FD1800D94763 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
-		62B79B792196FEFB00D94763 /* CustomSnapshotService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CustomSnapshotService.h; path = WebDriverAgentLib/snapshot2/CustomSnapshotService.h; sourceTree = SOURCE_ROOT; };
-		62B79B7A2196FEFB00D94763 /* CustomSnapshotService.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = CustomSnapshotService.mm; path = WebDriverAgentLib/snapshot2/CustomSnapshotService.mm; sourceTree = SOURCE_ROOT; };
+		62B79B7E2197353100D94763 /* FrameListener.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FrameListener.hpp; path = WebDriverAgentLib/snapshot/FrameListener.hpp; sourceTree = SOURCE_ROOT; };
+		62B79B7F2197353100D94763 /* FrameListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FrameListener.cpp; path = WebDriverAgentLib/snapshot/FrameListener.cpp; sourceTree = SOURCE_ROOT; };
+		62B79B802197353100D94763 /* StreamClient.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = StreamClient.mm; path = WebDriverAgentLib/snapshot/StreamClient.mm; sourceTree = SOURCE_ROOT; };
+		62B79B812197353100D94763 /* JpegEncoder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = JpegEncoder.hpp; path = WebDriverAgentLib/snapshot/JpegEncoder.hpp; sourceTree = SOURCE_ROOT; };
+		62B79B822197353100D94763 /* SimpleServer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SimpleServer.hpp; path = WebDriverAgentLib/snapshot/SimpleServer.hpp; sourceTree = SOURCE_ROOT; };
+		62B79B832197353100D94763 /* JpegEncoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = JpegEncoder.cpp; path = WebDriverAgentLib/snapshot/JpegEncoder.cpp; sourceTree = SOURCE_ROOT; };
+		62B79B842197353100D94763 /* SimpleServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SimpleServer.cpp; path = WebDriverAgentLib/snapshot/SimpleServer.cpp; sourceTree = SOURCE_ROOT; };
+		62B79B852197353100D94763 /* StreamClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StreamClient.h; path = WebDriverAgentLib/snapshot/StreamClient.h; sourceTree = SOURCE_ROOT; };
+		62B79B862197353100D94763 /* CustomSnapshotService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CustomSnapshotService.mm; path = WebDriverAgentLib/snapshot/CustomSnapshotService.mm; sourceTree = SOURCE_ROOT; };
+		62B79B872197353100D94763 /* CustomSnapshotService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomSnapshotService.h; path = WebDriverAgentLib/snapshot/CustomSnapshotService.h; sourceTree = SOURCE_ROOT; };
+		62B79B882197353100D94763 /* Frame.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Frame.hpp; path = WebDriverAgentLib/snapshot/Frame.hpp; sourceTree = SOURCE_ROOT; };
 		711084421DA3AA7500F913D6 /* FBXPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBXPath.h; sourceTree = "<group>"; };
 		711084431DA3AA7500F913D6 /* FBXPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBXPath.m; sourceTree = "<group>"; };
 		7119E1EB1E891F8600D0B125 /* FBPickerWheelSelectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBPickerWheelSelectTests.m; sourceTree = "<group>"; };
@@ -754,22 +754,22 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		62B79B5E2196FCAC00D94763 /* snapshot2 */ = {
+		62B79B7D2197351C00D94763 /* snapshot */ = {
 			isa = PBXGroup;
 			children = (
-				62B79B5F2196FCC500D94763 /* Frame.hpp */,
-				62B79B602196FCC500D94763 /* FrameListener.cpp */,
-				62B79B682196FCC600D94763 /* FrameListener.hpp */,
-				62B79B6A2196FCC600D94763 /* JpegEncoder.cpp */,
-				62B79B612196FCC500D94763 /* JpegEncoder.hpp */,
-				62B79B642196FCC500D94763 /* SimpleServer.cpp */,
-				62B79B652196FCC500D94763 /* SimpleServer.hpp */,
-				62B79B662196FCC600D94763 /* StreamClient.h */,
-				62B79B672196FCC600D94763 /* StreamClient.mm */,
-				62B79B792196FEFB00D94763 /* CustomSnapshotService.h */,
-				62B79B7A2196FEFB00D94763 /* CustomSnapshotService.mm */,
+				62B79B872197353100D94763 /* CustomSnapshotService.h */,
+				62B79B862197353100D94763 /* CustomSnapshotService.mm */,
+				62B79B882197353100D94763 /* Frame.hpp */,
+				62B79B7F2197353100D94763 /* FrameListener.cpp */,
+				62B79B7E2197353100D94763 /* FrameListener.hpp */,
+				62B79B832197353100D94763 /* JpegEncoder.cpp */,
+				62B79B812197353100D94763 /* JpegEncoder.hpp */,
+				62B79B842197353100D94763 /* SimpleServer.cpp */,
+				62B79B822197353100D94763 /* SimpleServer.hpp */,
+				62B79B852197353100D94763 /* StreamClient.h */,
+				62B79B802197353100D94763 /* StreamClient.mm */,
 			);
-			path = snapshot2;
+			path = snapshot;
 			sourceTree = "<group>";
 		};
 		91F9DAE01B99DBC2001349B2 = {
@@ -1146,7 +1146,7 @@
 		EEC288F81BF0ED2500B4DC79 /* WebDriverAgentLib */ = {
 			isa = PBXGroup;
 			children = (
-				62B79B5E2196FCAC00D94763 /* snapshot2 */,
+				62B79B7D2197351C00D94763 /* snapshot */,
 				EE9AB73E1CAEDF0C008C271F /* Categories */,
 				EE9AB74F1CAEDF0C008C271F /* Commands */,
 				EE9AB7721CAEDF0C008C271F /* Resources */,
@@ -1313,17 +1313,16 @@
 				EE35AD361E3B77D600A02D78 /* XCSourceCodeTreeNode.h in Headers */,
 				EE35AD341E3B77D600A02D78 /* XCPointerEventPath.h in Headers */,
 				EE158AE11CBD456F00A3E3F0 /* FBRouteRequest.h in Headers */,
+				62B79B892197353200D94763 /* FrameListener.hpp in Headers */,
 				EE35AD401E3B77D600A02D78 /* XCTest.h in Headers */,
 				EEC1950720C6D0790094500B /* FBElementHitPoint.h in Headers */,
 				EE35AD241E3B77D600A02D78 /* XCAccessibilityElement.h in Headers */,
-				62B79B7B2196FEFB00D94763 /* CustomSnapshotService.h in Headers */,
 				EE158AE41CBD456F00A3E3F0 /* FBSession.h in Headers */,
 				EE35AD0F1E3B77D600A02D78 /* _XCTestImplementation.h in Headers */,
 				EE158ACA1CBD456F00A3E3F0 /* FBTouchIDCommands.h in Headers */,
 				EE35AD6A1E3B77D600A02D78 /* XCUIApplication.h in Headers */,
 				EE158ABA1CBD456F00A3E3F0 /* FBCustomCommands.h in Headers */,
 				EE35AD0D1E3B77D600A02D78 /* _XCTestCaseInterruptionException.h in Headers */,
-				62B79B712196FCC600D94763 /* SimpleServer.hpp in Headers */,
 				EE158AC41CBD456F00A3E3F0 /* FBOrientationCommands.h in Headers */,
 				EE35AD611E3B77D600A02D78 /* XCTRunnerIDESession.h in Headers */,
 				EE158AE01CBD456F00A3E3F0 /* FBRouteRequest-Private.h in Headers */,
@@ -1353,6 +1352,7 @@
 				EE35AD371E3B77D600A02D78 /* XCSourceCodeTreeNodeEnumerator.h in Headers */,
 				EE158AB01CBD456F00A3E3F0 /* XCUIElement+FBIsVisible.h in Headers */,
 				EE158AF11CBD456F00A3E3F0 /* FBXPathCreator.h in Headers */,
+				62B79B8D2197353200D94763 /* SimpleServer.hpp in Headers */,
 				EE158AB41CBD456F00A3E3F0 /* XCUIElement+FBTap.h in Headers */,
 				EE158ADC1CBD456F00A3E3F0 /* FBResponsePayload.h in Headers */,
 				EE158ACC1CBD456F00A3E3F0 /* FBUnknownCommands.h in Headers */,
@@ -1369,15 +1369,17 @@
 				EE35AD2B1E3B77D600A02D78 /* XCDeviceEvent.h in Headers */,
 				EE18883A1DA661C400307AA8 /* FBMathUtils.h in Headers */,
 				EE35AD221E3B77D600A02D78 /* UISwipeGestureRecognizer-RecordingAdditions.h in Headers */,
+				62B79B902197353200D94763 /* StreamClient.h in Headers */,
+				62B79B922197353200D94763 /* CustomSnapshotService.h in Headers */,
 				713C6DCF1DDC772A00285B92 /* FBElementUtils.h in Headers */,
 				EE158ABC1CBD456F00A3E3F0 /* FBDebugCommands.h in Headers */,
 				EE35AD561E3B77D600A02D78 /* XCTestSuite.h in Headers */,
 				EE35AD6D1E3B77D600A02D78 /* XCUICoordinate.h in Headers */,
 				EE35AD5C1E3B77D600A02D78 /* XCTNSPredicateExpectation.h in Headers */,
+				62B79B8C2197353200D94763 /* JpegEncoder.hpp in Headers */,
 				EE35AD521E3B77D600A02D78 /* XCTestObservationCenter.h in Headers */,
 				EE35AD5B1E3B77D600A02D78 /* XCTNSNotificationExpectation.h in Headers */,
 				EE35AD751E3B77D600A02D78 /* XCUIRecorderNodeFinder.h in Headers */,
-				62B79B722196FCC600D94763 /* StreamClient.h in Headers */,
 				EE158AAE1CBD456F00A3E3F0 /* XCUIElement+FBAccessibility.h in Headers */,
 				EE35AD781E3B77D600A02D78 /* XCUIRecorderUtilities.h in Headers */,
 				EE35AD421E3B77D600A02D78 /* XCTestCaseRun.h in Headers */,
@@ -1439,14 +1441,12 @@
 				EE35AD331E3B77D600A02D78 /* XCPointerEvent.h in Headers */,
 				EE35AD351E3B77D600A02D78 /* XCSourceCodeRecording.h in Headers */,
 				EEE9B4721CD02B88009D2030 /* FBRunLoopSpinner.h in Headers */,
-				62B79B6D2196FCC600D94763 /* JpegEncoder.hpp in Headers */,
 				EE3A18621CDE618F00DE4205 /* FBErrorBuilder.h in Headers */,
 				EE35AD261E3B77D600A02D78 /* XCApplicationMonitor_iOS.h in Headers */,
 				EE3A18661CDE734B00DE4205 /* FBKeyboard.h in Headers */,
 				AD6C269C1CF2494200F8B5FF /* XCUIApplication+FBHelpers.h in Headers */,
 				EE35AD101E3B77D600A02D78 /* _XCTestObservationCenterImplementation.h in Headers */,
 				AD6C26981CF2481700F8B5FF /* XCUIDevice+FBHelpers.h in Headers */,
-				62B79B6B2196FCC600D94763 /* Frame.hpp in Headers */,
 				71A7EAF91E224648001DA4F2 /* FBClassChainQueryParser.h in Headers */,
 				EE9B76AA1CF7A43900275851 /* FBMacros.h in Headers */,
 				EE35AD4A1E3B77D600A02D78 /* XCTestExpectationDelegate-Protocol.h in Headers */,
@@ -1472,7 +1472,6 @@
 				EE35AD2F1E3B77D600A02D78 /* XCKeyboardInputSolver.h in Headers */,
 				EE7E271E1D06C69F001BEC7B /* FBXCTestCaseImplementationFailureHoldingProxy.h in Headers */,
 				EE7E271C1D06C69F001BEC7B /* FBDebugLogDelegateDecorator.h in Headers */,
-				62B79B742196FCC600D94763 /* FrameListener.hpp in Headers */,
 				EEDFE1211D9C06F800E6FFE5 /* XCUIDevice+FBHealthCheck.h in Headers */,
 				EE35AD761E3B77D600A02D78 /* XCUIRecorderNodeFinderMatch.h in Headers */,
 				EE35AD6C1E3B77D600A02D78 /* XCUIApplicationProcess.h in Headers */,
@@ -1486,6 +1485,7 @@
 				EE35AD631E3B77D600A02D78 /* XCTTestRunSessionDelegate-Protocol.h in Headers */,
 				EE35AD431E3B77D600A02D78 /* XCTestCaseSuite.h in Headers */,
 				EE35AD091E3B77D600A02D78 /* _XCInternalTestRun.h in Headers */,
+				62B79B932197353200D94763 /* Frame.hpp in Headers */,
 				712A0C871DA3E55D007D02E5 /* FBXPath-Private.h in Headers */,
 				EE35AD321E3B77D600A02D78 /* XCKeyMappingPath.h in Headers */,
 			);
@@ -1660,11 +1660,11 @@
 				EE3A18631CDE618F00DE4205 /* FBErrorBuilder.m in Sources */,
 				71A7EAF61E20516B001DA4F2 /* XCUIElement+FBClassChain.m in Sources */,
 				71555A3E1DEC460A007D4A8B /* NSExpression+FBFormat.m in Sources */,
-				62B79B702196FCC600D94763 /* SimpleServer.cpp in Sources */,
 				EE158AF21CBD456F00A3E3F0 /* FBXPathCreator.m in Sources */,
 				AD6C269D1CF2494200F8B5FF /* XCUIApplication+FBHelpers.m in Sources */,
 				EE3A18671CDE734B00DE4205 /* FBKeyboard.m in Sources */,
 				713C6DD01DDC772A00285B92 /* FBElementUtils.m in Sources */,
+				62B79B912197353200D94763 /* CustomSnapshotService.mm in Sources */,
 				EEC1950820C6D0790094500B /* FBElementHitPoint.m in Sources */,
 				EE158AFA1CBD456F00A3E3F0 /* FBApplicationProcessProxy.m in Sources */,
 				EE6A893B1D0B38640083E92B /* FBFailureProofTestCase.m in Sources */,
@@ -1684,6 +1684,7 @@
 				EEDFE1221D9C06F800E6FFE5 /* XCUIDevice+FBHealthCheck.m in Sources */,
 				EE158AF81CBD456F00A3E3F0 /* FBSpringboardApplication.m in Sources */,
 				EE158AD91CBD456F00A3E3F0 /* FBResponseFilePayload.m in Sources */,
+				62B79B8F2197353200D94763 /* SimpleServer.cpp in Sources */,
 				EEE3764A1D59FAE900ED88DD /* XCUIElement+FBWebDriverAttributes.m in Sources */,
 				EE8DDD7E20C5733C004D4925 /* XCUIElement+FBForceTouch.m in Sources */,
 				EE158ACB1CBD456F00A3E3F0 /* FBTouchIDCommands.m in Sources */,
@@ -1702,15 +1703,14 @@
 				EE158AAF1CBD456F00A3E3F0 /* XCUIElement+FBAccessibility.m in Sources */,
 				EE158AE51CBD456F00A3E3F0 /* FBSession.m in Sources */,
 				EE158AC11CBD456F00A3E3F0 /* FBFindElementCommands.m in Sources */,
+				62B79B8B2197353200D94763 /* StreamClient.mm in Sources */,
 				EE7E271D1D06C69F001BEC7B /* FBDebugLogDelegateDecorator.m in Sources */,
 				EE158AB91CBD456F00A3E3F0 /* FBAlertViewCommands.m in Sources */,
-				62B79B6C2196FCC600D94763 /* FrameListener.cpp in Sources */,
 				EE158AB31CBD456F00A3E3F0 /* XCUIElement+FBScrolling.m in Sources */,
 				EE158AC91CBD456F00A3E3F0 /* FBSessionCommands.m in Sources */,
-				62B79B762196FCC600D94763 /* JpegEncoder.cpp in Sources */,
+				62B79B8E2197353200D94763 /* JpegEncoder.cpp in Sources */,
 				EE158AC31CBD456F00A3E3F0 /* FBInspectorCommands.m in Sources */,
 				EE006EB11EBA1AA9006900A4 /* XCElementSnapshot+FBHitPoint.m in Sources */,
-				62B79B7C2196FEFB00D94763 /* CustomSnapshotService.mm in Sources */,
 				EE9B76A71CF7A43900275851 /* FBConfiguration.m in Sources */,
 				EE158AD31CBD456F00A3E3F0 /* FBElementCache.m in Sources */,
 				AD6C26951CF2379700F8B5FF /* FBAlert.m in Sources */,
@@ -1719,8 +1719,8 @@
 				EE5A24421F136D360078B1D9 /* FBXCodeCompatibility.m in Sources */,
 				EEE376421D59F81400ED88DD /* XCElementSnapshot+FBHelpers.m in Sources */,
 				EE158AE91CBD456F00A3E3F0 /* FBElementTypeTransformer.m in Sources */,
+				62B79B8A2197353200D94763 /* FrameListener.cpp in Sources */,
 				EE158AF61CBD456F00A3E3F0 /* FBApplication.m in Sources */,
-				62B79B732196FCC600D94763 /* StreamClient.mm in Sources */,
 				EE35AD7C1E3B80C000A02D78 /* FBXCTestDaemonsProxy.m in Sources */,
 				EE158AB51CBD456F00A3E3F0 /* XCUIElement+FBTap.m in Sources */,
 				EE18883B1DA661C400307AA8 /* FBMathUtils.m in Sources */,
