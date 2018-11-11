@@ -8,8 +8,8 @@
 
 @interface VideoSource : NSObject
 @property (assign) StreamClient *mClient;
-@property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, strong) dispatch_queue_t snapshotQueue;
+@property (nonatomic, strong) dispatch_source_t timer;
 
 - (id) init:(StreamClient *)client;
 - (void) start;
@@ -29,30 +29,33 @@
 }
 
 - (void) start {
-  [self stop];
-  self.timer = [NSTimer timerWithTimeInterval:5 target:self selector:@selector(captureSnapshot) userInfo:nil repeats:YES];
-  [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
-  [self.timer fire];
-//  [self captureSnapshot];
+  self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, self.snapshotQueue);
+  dispatch_source_set_timer(self.timer, dispatch_walltime(NULL, 0), 1.f * NSEC_PER_SEC, 0);
+  dispatch_source_set_event_handler(self.timer, ^{ 
+    [self  captureSnapshot];
+  });
+  dispatch_resume(self.timer);
 }
 
 - (void) stop {
-  if ([self.timer isValid]) {
-    [self.timer invalidate];
+  if (self.timer) {
+    dispatch_source_cancel(self.timer);
     self.timer = nil;
   }
 }
 
 - (void) captureSnapshot {
-  NSError *error;
-  NSData *screenshotData = [[XCUIDevice sharedDevice] fb_screenshotWithError:&error];
-  dispatch_async(self.snapshotQueue, ^{
-    if (screenshotData) {
-      UIImage *image = [UIImage imageWithData:screenshotData];
-      CVPixelBufferRef buffer = [self pixelBufferFromCGImage:image.CGImage];
-      NSLog(@"Success capture snapshot, size: %@", NSStringFromCGSize(image.size));
-      self.mClient->captureOutput(buffer);
-    }
+  dispatch_async(dispatch_get_main_queue(), ^{
+    NSError *error;
+    NSData *screenshotData = [[XCUIDevice sharedDevice] fb_screenshotWithError:&error];
+    dispatch_async(self.snapshotQueue, ^{
+      if (screenshotData) {
+        UIImage *image = [UIImage imageWithData:screenshotData];
+        CVPixelBufferRef buffer = [self pixelBufferFromCGImage:image.CGImage];
+        NSLog(@"Success capture snapshot, size: %@", NSStringFromCGSize(image.size));
+        self.mClient->captureOutput(buffer);
+      }
+    });
   });
 }
 
