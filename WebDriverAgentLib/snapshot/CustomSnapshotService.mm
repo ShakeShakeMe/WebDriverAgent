@@ -18,6 +18,7 @@
 #include "FrameListener.hpp"
 #include "JpegEncoder.hpp"
 #include "StreamClient.h"
+#include "Banner.hpp"
 
 @interface CustomSnapshotService()
 @property (nonatomic, strong) NSMutableArray *connections;
@@ -70,6 +71,17 @@ static ssize_t pumps(int fd, unsigned char* data, size_t length) {
     client.lockFrame(&frame);
     std::cout << "resolution: " << frame.width << "x" << frame.height << std::endl;
     static JpegEncoder encoder(&frame);
+    
+    DeviceInfo realInfo, desiredInfo;
+    realInfo.orientation = 0;
+    realInfo.height = frame.height;
+    realInfo.width = frame.width;
+    desiredInfo.orientation = 0;
+    desiredInfo.height = frame.height;
+    desiredInfo.width = frame.width;
+    
+    Banner banner(realInfo, desiredInfo);
+    
     client.releaseFrame(&frame);
     
     SimpleServer server;
@@ -81,6 +93,8 @@ static ssize_t pumps(int fd, unsigned char* data, size_t length) {
     unsigned char frameSize[4];
     while (gWaiter.isRunning() and (socket = server.accept()) > 0) {
       std::cout << "New client connection" << std::endl;
+      
+      send(socket, banner.getData(), banner.getSize(), 0);
       
       client.start();
       while (gWaiter.isRunning() and gWaiter.waitForFrame() > 0) {

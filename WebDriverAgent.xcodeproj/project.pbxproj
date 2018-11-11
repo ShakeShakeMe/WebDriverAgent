@@ -24,6 +24,10 @@
 		62B79B912197353200D94763 /* CustomSnapshotService.mm in Sources */ = {isa = PBXBuildFile; fileRef = 62B79B862197353100D94763 /* CustomSnapshotService.mm */; };
 		62B79B922197353200D94763 /* CustomSnapshotService.h in Headers */ = {isa = PBXBuildFile; fileRef = 62B79B872197353100D94763 /* CustomSnapshotService.h */; };
 		62B79B932197353200D94763 /* Frame.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 62B79B882197353100D94763 /* Frame.hpp */; };
+		62B79B96219801A000D94763 /* Banner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 62B79B942198019F00D94763 /* Banner.cpp */; };
+		62B79B97219801A000D94763 /* Banner.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 62B79B95219801A000D94763 /* Banner.hpp */; };
+		62B79B9A21980FE700D94763 /* UIDevice+ScreenResolution.h in Headers */ = {isa = PBXBuildFile; fileRef = 62B79B9821980FE700D94763 /* UIDevice+ScreenResolution.h */; };
+		62B79B9B21980FE700D94763 /* UIDevice+ScreenResolution.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B79B9921980FE700D94763 /* UIDevice+ScreenResolution.m */; };
 		711084441DA3AA7500F913D6 /* FBXPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 711084421DA3AA7500F913D6 /* FBXPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		711084451DA3AA7500F913D6 /* FBXPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 711084431DA3AA7500F913D6 /* FBXPath.m */; };
 		712A0C851DA3E459007D02E5 /* FBXPathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 712A0C841DA3E459007D02E5 /* FBXPathTests.m */; };
@@ -374,6 +378,10 @@
 		62B79B862197353100D94763 /* CustomSnapshotService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = CustomSnapshotService.mm; path = WebDriverAgentLib/snapshot/CustomSnapshotService.mm; sourceTree = SOURCE_ROOT; };
 		62B79B872197353100D94763 /* CustomSnapshotService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomSnapshotService.h; path = WebDriverAgentLib/snapshot/CustomSnapshotService.h; sourceTree = SOURCE_ROOT; };
 		62B79B882197353100D94763 /* Frame.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Frame.hpp; path = WebDriverAgentLib/snapshot/Frame.hpp; sourceTree = SOURCE_ROOT; };
+		62B79B942198019F00D94763 /* Banner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Banner.cpp; path = WebDriverAgentLib/snapshot/Banner.cpp; sourceTree = SOURCE_ROOT; };
+		62B79B95219801A000D94763 /* Banner.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Banner.hpp; path = WebDriverAgentLib/snapshot/Banner.hpp; sourceTree = SOURCE_ROOT; };
+		62B79B9821980FE700D94763 /* UIDevice+ScreenResolution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIDevice+ScreenResolution.h"; path = "WebDriverAgentLib/snapshot/UIDevice+ScreenResolution.h"; sourceTree = SOURCE_ROOT; };
+		62B79B9921980FE700D94763 /* UIDevice+ScreenResolution.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+ScreenResolution.m"; path = "WebDriverAgentLib/snapshot/UIDevice+ScreenResolution.m"; sourceTree = SOURCE_ROOT; };
 		711084421DA3AA7500F913D6 /* FBXPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBXPath.h; sourceTree = "<group>"; };
 		711084431DA3AA7500F913D6 /* FBXPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBXPath.m; sourceTree = "<group>"; };
 		7119E1EB1E891F8600D0B125 /* FBPickerWheelSelectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBPickerWheelSelectTests.m; sourceTree = "<group>"; };
@@ -757,6 +765,8 @@
 		62B79B7D2197351C00D94763 /* snapshot */ = {
 			isa = PBXGroup;
 			children = (
+				62B79B942198019F00D94763 /* Banner.cpp */,
+				62B79B95219801A000D94763 /* Banner.hpp */,
 				62B79B872197353100D94763 /* CustomSnapshotService.h */,
 				62B79B862197353100D94763 /* CustomSnapshotService.mm */,
 				62B79B882197353100D94763 /* Frame.hpp */,
@@ -768,6 +778,8 @@
 				62B79B822197353100D94763 /* SimpleServer.hpp */,
 				62B79B852197353100D94763 /* StreamClient.h */,
 				62B79B802197353100D94763 /* StreamClient.mm */,
+				62B79B9821980FE700D94763 /* UIDevice+ScreenResolution.h */,
+				62B79B9921980FE700D94763 /* UIDevice+ScreenResolution.m */,
 			);
 			path = snapshot;
 			sourceTree = "<group>";
@@ -1342,6 +1354,7 @@
 				EE35AD551E3B77D600A02D78 /* XCTestRun.h in Headers */,
 				EE158AE61CBD456F00A3E3F0 /* FBWebServer.h in Headers */,
 				EE158AC61CBD456F00A3E3F0 /* FBScreenshotCommands.h in Headers */,
+				62B79B9A21980FE700D94763 /* UIDevice+ScreenResolution.h in Headers */,
 				EE35AD0A1E3B77D600A02D78 /* _XCKVOExpectationImplementation.h in Headers */,
 				EE0D1F611EBCDCF7006A3123 /* NSString+FBVisualLength.h in Headers */,
 				EE35AD7B1E3B80C000A02D78 /* FBXCTestDaemonsProxy.h in Headers */,
@@ -1399,6 +1412,7 @@
 				EE158AD41CBD456F00A3E3F0 /* FBExceptionHandler.h in Headers */,
 				EE158ADE1CBD456F00A3E3F0 /* FBRoute.h in Headers */,
 				EE35AD471E3B77D600A02D78 /* XCTestDriver.h in Headers */,
+				62B79B97219801A000D94763 /* Banner.hpp in Headers */,
 				EE35AD121E3B77D600A02D78 /* _XCTNSNotificationExpectationImplementation.h in Headers */,
 				EE35AD3A1E3B77D600A02D78 /* XCSynthesizedEventRecord.h in Headers */,
 				EE158AC21CBD456F00A3E3F0 /* FBInspectorCommands.h in Headers */,
@@ -1687,7 +1701,9 @@
 				62B79B8F2197353200D94763 /* SimpleServer.cpp in Sources */,
 				EEE3764A1D59FAE900ED88DD /* XCUIElement+FBWebDriverAttributes.m in Sources */,
 				EE8DDD7E20C5733C004D4925 /* XCUIElement+FBForceTouch.m in Sources */,
+				62B79B9B21980FE700D94763 /* UIDevice+ScreenResolution.m in Sources */,
 				EE158ACB1CBD456F00A3E3F0 /* FBTouchIDCommands.m in Sources */,
+				62B79B96219801A000D94763 /* Banner.cpp in Sources */,
 				EE158ABD1CBD456F00A3E3F0 /* FBDebugCommands.m in Sources */,
 				716E0BCF1E917E810087A825 /* NSString+FBXMLSafeString.m in Sources */,
 				EE158ACD1CBD456F00A3E3F0 /* FBUnknownCommands.m in Sources */,

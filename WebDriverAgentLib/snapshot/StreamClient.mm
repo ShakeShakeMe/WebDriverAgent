@@ -30,9 +30,9 @@
 
 - (void) start {
   self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, self.snapshotQueue);
-  dispatch_source_set_timer(self.timer, dispatch_walltime(NULL, 0), 1.f * NSEC_PER_SEC, 0);
+  dispatch_source_set_timer(self.timer, dispatch_walltime(NULL, 0), .2f * NSEC_PER_SEC, 0);
   dispatch_source_set_event_handler(self.timer, ^{ 
-    [self  captureSnapshot];
+    [self captureSnapshot];
   });
   dispatch_resume(self.timer);
 }
@@ -51,7 +51,8 @@
     dispatch_async(self.snapshotQueue, ^{
       if (screenshotData) {
         UIImage *image = [UIImage imageWithData:screenshotData];
-        CVPixelBufferRef buffer = [self pixelBufferFromCGImage:image.CGImage];
+        UIImage *scaledImage = [self imageWithImage:image aspectScaledToWidth:100.f];
+        CVPixelBufferRef buffer = [self pixelBufferFromCGImage:scaledImage.CGImage];
         NSLog(@"Success capture snapshot, size: %@", NSStringFromCGSize(image.size));
         self.mClient->captureOutput(buffer);
       }
@@ -59,13 +60,20 @@
   });
 }
 
+- (UIImage *)imageWithImage:(UIImage *)image aspectScaledToWidth:(CGFloat)newWidth {
+  CGSize newSize = CGSizeMake(newWidth, image.size.height / image.size.width * newWidth);
+  UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+  [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+  UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+  UIGraphicsEndImageContext();
+  return newImage;
+}
+
 - (CVPixelBufferRef)pixelBufferFromCGImage:(CGImageRef)image
 {
   // set pixel buffer attributes so we get an iosurface
-  NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
-                           @YES, kCVPixelBufferCGImageCompatibilityKey,
-                           @YES, kCVPixelBufferCGBitmapContextCompatibilityKey,
-                           nil];
+  NSDictionary *options =
+  [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES],kCVPixelBufferCGImageCompatibilityKey, [NSNumber numberWithBool:YES],kCVPixelBufferCGBitmapContextCompatibilityKey,nil];
   CVPixelBufferRef pixelBuffer = NULL;
   CGFloat frameWidth = CGImageGetWidth(image);
   CGFloat frameHeight = CGImageGetHeight(image);
@@ -93,7 +101,7 @@
                                                CGImageGetBitsPerComponent(image),
                                                CVPixelBufferGetBytesPerRow(pixelBuffer),
                                                rgbColorSpace,
-                                               (CGBitmapInfo)kCGImageAlphaNoneSkipFirst);
+                                               (CGBitmapInfo)kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedFirst);
   NSParameterAssert(context);
   
   CGContextConcatCTM(context, CGAffineTransformIdentity);

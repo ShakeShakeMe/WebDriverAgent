@@ -22,6 +22,7 @@
 #import "FBMacros.h"
 #import "XCAXClient_iOS.h"
 #import "XCUIScreen.h"
+#import "UIDevice+ScreenResolution.h"
 
 //static const NSTimeInterval FBHomeButtonCoolOffTime = 1.;
 
@@ -56,8 +57,10 @@
     return result;
   }
 
-  XCUIApplication *app = FBApplication.fb_activeApplication;
-  CGSize screenSize = FBAdjustDimensionsForApplication(app.frame.size, app.interfaceOrientation);
+//  XCUIApplication *app = FBApplication.fb_activeApplication;
+//  CGSize screenSize = FBAdjustDimensionsForApplication(app.frame.size, app.interfaceOrientation);
+  CGSize screenSize = [[UIDevice currentDevice] screenResolution];
+  
   // https://developer.apple.com/documentation/xctest/xctimagequality?language=objc
   // Select lower quality, since XCTest crashes randomly if the maximum quality (zero value) is selected
   // and the resulting screenshot does not fit the memory buffer preallocated for it by the operating system
@@ -72,7 +75,7 @@
 
   // The resulting data is a JPEG image, so we need to convert it to PNG representation
   UIImage *image = [UIImage imageWithData:result];
-  return (NSData *)UIImageJPEGRepresentation(image, 0.2);
+  return (NSData *)UIImagePNGRepresentation(image);
 }
 
 - (BOOL)fb_fingerTouchShouldMatch:(BOOL)shouldMatch
