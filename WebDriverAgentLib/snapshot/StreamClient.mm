@@ -31,7 +31,7 @@
 - (void) start {
   self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, self.snapshotQueue);
   dispatch_source_set_timer(self.timer, dispatch_walltime(NULL, 0), .2f * NSEC_PER_SEC, 0);
-  dispatch_source_set_event_handler(self.timer, ^{ 
+  dispatch_source_set_event_handler(self.timer, ^{
     [self captureSnapshot];
   });
   dispatch_resume(self.timer);
